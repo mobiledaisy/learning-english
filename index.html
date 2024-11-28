@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Language Learning App</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="card-container hidden" id="gameContainer">
+   <div class="card" id="wordCard">apple</div>
+   <div class="controls">
+     <button id="prevButton">←</button>
+     <span id="step">0/10</span>
+     <button id="nextButton">→</button>
+   </div>
+   <div class="input-container">
+     <input type="text" id="translationInput" placeholder="Введіть переклад">
+     <button id="checkButton">Перевірити</button>
+   </div>
+   <div class="statistics">
+     <span class="correct">Вірно: <span id="correctCount">0</span></span>
+     <span class="incorrect">Невірно: <span id="incorrectCount">0</span></span>
+   </div>
+ </div>
+
+ <div id="difficultySelection">
+   <h2>Оберіть рівень складності</h2>
+   <button data-level="easy">Початковий</button>
+   <button data-level="medium">Середній</button>
+   <button data-level="hard">Високий</button>
+ </div>
+
+ <div id="modal" class="hidden">
+   <div class="modal-content">
+     <h2>Вітаю, ви пройшли рівень!</h2>
+     <button id="closeModal">Закрити</button>
+   </div>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
